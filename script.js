@@ -40,7 +40,7 @@ function startGame() {
 }
 
 function checkAnswer(room, answer) {
-    const feedback = document.getElementById(`feedback${room === 'living-room' || room === 'library' || room === 'dining-hall' || room === 'gallery' || room === 'study' || room === 'observatory' ? '2' : ''}`);
+    const feedback = document.querySelector(`#${room} .feedback`);
     const currentRoom = rooms[room];
     if (answer === currentRoom.correctAnswer) {
         feedback.textContent = 'Correct! A secret door opens, leading to the next room.';
