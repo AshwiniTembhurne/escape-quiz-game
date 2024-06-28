@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Escape Room Quiz</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Escape Room Quiz</h1>
+    </header>
+    <div id="game-container">
+        <div id="game">
+            <div id="intro" class="room active">
+                <h2>Escape from the Haunted Mansion</h2>
+                <p>You find yourself in a creepy, abandoned mansion. To escape, solve the puzzles and answer the questions correctly. Find the hidden key before midnight!</p>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+            <div id="living-room" class="room hidden">
+                <h2>The Living Room</h2>
+                <p>Which house does Harry Potter belong to?</p>
+                <button onclick="checkAnswer('living-room', 'Gryffindor')">Gryffindor</button>
+                <button onclick="checkAnswer('living-room', 'Hufflepuff')">Hufflepuff</button>
+                <button onclick="checkAnswer('living-room', 'Ravenclaw')">Ravenclaw</button>
+                <button onclick="checkAnswer('living-room', 'Slytherin')">Slytherin</button>
+                <p id="feedback1"></p>
+            </div>
+            <div id="library" class="room hidden">
+                <h2>The Library</h2>
+                <p>Which of these famous authors wrote 'Dracula'?</p>
+                <button onclick="checkAnswer('library', 'A')">Mary Shelley</button>
+                <button onclick="checkAnswer('library', 'B')">Bram Stoker</button>
+                <button onclick="checkAnswer('library', 'C')">Edgar Allan Poe</button>
+                <button onclick="checkAnswer('library', 'D')">H.P. Lovecraft</button>
+                <p id="feedback2"></p>
+            </div>
+            <div id="dining-hall" class="room hidden">
+                <h2>The Dining Hall</h2>
+                <p>What is the sum of the prime numbers less than 10?</p>
+                <button onclick="checkAnswer('dining-hall', '17')">17</button>
+                <button onclick="checkAnswer('dining-hall', '18')">18</button>
+                <button onclick="checkAnswer('dining-hall', '16')">16</button>
+                <button onclick="checkAnswer('dining-hall', '19')">19</button>
+                <p id="feedback3"></p>
+            </div>
+            <div id="gallery" class="room hidden">
+                <h2>The Gallery</h2>
+                <p>Which of these paintings is by Vincent van Gogh?</p>
+                <button onclick="checkAnswer('gallery', 'The Scream')">The Scream</button>
+                <button onclick="checkAnswer('gallery', 'Starry Night')">Starry Night</button>
+                <button onclick="checkAnswer('gallery', 'The Persistence of Memory')">The Persistence of Memory</button>
+                <button onclick="checkAnswer('gallery', 'Girl with a Pearl Earring')">Girl with a Pearl Earring</button>
+                <p id="feedback4"></p>
+            </div>
+            <div id="study" class="room hidden">
+                <h2>The Study</h2>
+                <p>Which element is necessary for the process of photosynthesis?</p>
+                <button onclick="checkAnswer('study', 'Carbon Dioxide')">Carbon Dioxide</button>
+                <button onclick="checkAnswer('study', 'Oxygen')">Oxygen</button>
+                <button onclick="checkAnswer('study', 'Hydrogen')">Hydrogen</button>
+                <button onclick="checkAnswer('study', 'Nitrogen')">Nitrogen</button>
+                <p id="feedback5"></p>
+            </div>
+            <div id="observatory" class="room hidden">
+                <h2>The Observatory</h2>
+                <p>Which planet is known as the Red Planet?</p>
+                <button onclick="checkAnswer('observatory', 'Mars')">Mars</button>
+                <button onclick="checkAnswer('observatory', 'Venus')">Venus</button>
+                <button onclick="checkAnswer('observatory', 'Jupiter')">Jupiter</button>
+                <button onclick="checkAnswer('observatory', 'Saturn')">Saturn</button>
+                <p id="feedback6"></p>
+            </div>
+            <div id="final-room" class="room hidden">
+                <h2>The Secret Chamber</h2>
+                <p>Congratulations! You've found the hidden key and escaped the haunted mansion!</p>
+                <p>Thank you for playing the Virtual Escape Room Quiz!</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Virtual Escape Room Quiz</p>
+    </footer>
+    <audio id="background-sound" loop>
+        <source src="assets/audio/spookysound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="correct-answer-sound">
+        <source src="assets/audio/spookysound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="next-room-sound">
+        <source src="assets/audio/squeaky-door-open-113212.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
